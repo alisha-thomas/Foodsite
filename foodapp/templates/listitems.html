@@ -1,0 +1,55 @@
+<html>
+<style>
+
+table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table tr{background-color: #f2f2f2;}
+
+
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #B22222;
+    color: white;
+}
+body {background-color: #99ff66;}
+  h1 {color: red;}
+  p {color: #B22222;}
+</style>
+<h1>SPECIAL MENU </h1>
+<body background="https://wallpaperaccess.com/full/271686.jpg">
+
+<table>
+    <tr>
+        <th>FOOD </th>
+        <th> PRICE </th>
+        <th> TYPE </th>
+        <th> INGREDIENTS</th>
+        
+    </tr>
+    {% for item in mov %}
+    <tr> 
+        <td>{{ item.foodname}}</td>
+        <td>{{ item.price }}</td>
+        <td>{{ item.foodtype }}</td>
+        <td>{{ item.ingredients }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<form action = '/logout/' method='get'>
+<button onclick="logout()">LOGOUT</button>
+</form>
+</body>
+</html>

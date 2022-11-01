@@ -1,0 +1,77 @@
+<html>
+<style>
+.dropbtn {
+  background-color: green;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+button {
+    background-color: #B22222; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+body {background-color: #99ff66;}
+
+  h1 {color: red;}
+  p {color: #B22222;}
+</style>
+
+<style>
+
+button {
+    background-color: #B22222; 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    
+    font-size: 14px;
+}
+  body {background-color: #99ff66;}
+  h1 {color: blue;}
+  p {color: #B22222;}
+
+  div {
+   border: 1px solid #fff;
+   background: #FFDAB9;
+   width: 60%;
+   opacity: 0.8;
+   margin-left:170px;
+   margin-top:70px;
+}
+</style>
+
+
+<body background="https://wallpaperaccess.com/full/271686.jpg">
+<h1>DELETE FOOD </h1>
+<form action ='deletefood' method="get">
+<div class="container">
+    SELECT FOOD TYPE:
+    <select class="dropbtn" name="fdtyp">
+     <option value="starters">Starters</option>
+     <option value="maincourse">Main Course</option>
+     <option value="drinks">Drinks</option>
+     <option value="desserts">Desserts</option>
+    </select><br><br>
+    <label><b>Food id</b></label>
+    <input type="number" name="id" required>
+    
+<form action ='deletefood' method="get">
+<button onclick="deletefood()">DELETE</button></form>
+</div>
+
+  <div class="container" style="background-color:#ffe3e3">
+    
+</form>
+</body>
+</html>

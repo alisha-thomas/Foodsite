@@ -1,0 +1,83 @@
+<html>
+    <style>
+
+        table {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 80%;
+        }
+        
+        table td, table th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        
+        table tr{background-color: #f2f2f2;}
+        
+        
+        
+        table th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #B22222;
+            color: white;
+        }
+        body {background-color: #99ff66;}
+          h1 {color: red;}
+          p {color: #B22222;}
+        </style>
+
+
+<h2> MANAGE MENU </h2>
+
+<body background="https://wallpaperaccess.com/full/271686.jpg">
+<form action = 'addfoodpg' method='get'>
+<button onclick="addfoodpg()">ADD FOOD</button>
+</form>
+
+<form action = 'updatefoodpg' method='get'>
+<button onclick="updatefoodpg()">UPDATE FOOD</button>
+</form> 
+
+<form action = 'deletefoodpg' method='get'>
+<button onclick="deletefoodpg()">DELETE FOOD</button>
+</form> 
+
+<form action = 'qr_code' method='get'>
+    <button onclick="qr_code()">GENERATE QR CODE</button>
+    </form> 
+
+<h1>FOOD MENU </h1>
+<table>
+    <tr>
+        <th>FOOD </th>
+        <th> PRICE </th>
+        <th> TYPE </th>
+        <th> INGREDIENTS</th>
+        <!-- <th></th>
+        <th></th> -->
+        
+    </tr>
+    {% for item in mov %}
+    <tr> 
+        <td>{{ item.foodname}}</td>
+        <td>{{ item.price }}</td>
+        <td>{{ item.foodtype }}</td>
+        <td>{{ item.ingredients }}</td>
+        <!-- <td>
+            <form action = 'deletefoodpg' method='get' name="fdn" value=item.foodname>
+                <button onclick="deletefoodpg()" data-id="test">DELETE FOOD</button>
+                </form>
+        </td>
+        <td>
+            <form action = 'updatefoodpg' method='get'>
+                <button onclick="updatefoodpg()">UPDATE FOOD</button>
+                </form> 
+        </td> -->
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
