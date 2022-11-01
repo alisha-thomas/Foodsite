@@ -59,6 +59,7 @@ def updatefood(request):
 
 
 def qr_code(request):
+    #here the user can replace the link for which qr code needs to be generated
     s = "http://127.0.0.1:8000/foodapp/list_items"
     # Generate QR code
     url = pyqrcode.create(s)
